@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 allure-results/*
+config/user.conf.js
+package-lock.json

@@ -3,15 +3,14 @@ import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
 
 const AuthApp = new AuthAppActions();
 
-suite('Login shoul be successful for valid credentials', async() => {
+describe('Login should be successful for valid credentials', async() => {
    before('Navigate to login page for Moodle', async () => {
         await AuthApp.open();
         await AuthApp.successfulOpen();
         await AuthApp.navigateToLogin();
    }); 
 
-   test('dummy test', async () => {
+   it('for user with role STUDENT', async () => {
         console.log("It is working!!!");
    });
-
 });
