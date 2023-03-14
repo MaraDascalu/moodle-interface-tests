@@ -4,7 +4,7 @@ export const config = {
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
-    runner: 'browser',
+    runner: 'local',
     
     //
     // ==================
@@ -23,11 +23,11 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        '../test/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        '../test/spec/**/*.js'
     ],
     //
     // ============
@@ -142,7 +142,7 @@ export const config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd',
+        ui: 'tdd',
         timeout: 60000
     },
     //
