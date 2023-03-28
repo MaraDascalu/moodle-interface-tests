@@ -26,10 +26,6 @@ describe('Login should be successful for valid credentials', async() => {
         await AuthApp.navigateToLogin();
    }); 
 
-//    it('for existing account', async () => {
-//        await AuthApp.loginWithExistingAcc(); 
-//    });
-
    it('for new account', async () => {
     await AuthApp.loginWithNewAccount();
    })
