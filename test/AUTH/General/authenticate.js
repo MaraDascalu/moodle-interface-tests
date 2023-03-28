@@ -1,4 +1,3 @@
-// import { USER } from "../../../config/user.conf";
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
 
 const AuthApp = new AuthAppActions();
