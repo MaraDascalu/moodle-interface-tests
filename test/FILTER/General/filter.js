@@ -1,0 +1,25 @@
+import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
+import CourseManagementActions from "../../../lib/util/CourseManagement/actions.js";
+
+const AuthApp = new AuthAppActions();
+const CourseManagement = new CourseManagementActions()
+
+describe('Try to filter and sort the courses from the top of the page', async () => {
+
+    beforeEach('Sign in and go to the main page', async () => {
+        await AuthApp.open();
+        await AuthApp.successfulOpen();
+        await AuthApp.navigateToLogin();
+        await AuthApp.loginWithNewAccount();
+        await CourseManagement.successfulOpen();
+    });
+
+    it('Filter the courses by year', async () => {
+        await CourseManagement.filterByYear();
+    });
+
+    it('Filter the courses by semester', async () => {
+        await CourseManagement.filterBySemester();
+    });
+
+});
