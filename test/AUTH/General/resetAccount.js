@@ -10,13 +10,19 @@ describe('User should be able to reset', async() => {
    }); 
 
    it('work email', async() => {
-      await AuthApp.workAccount();
+      await AuthApp.resetWorkAccount();
       await AuthApp.successfulOpen("passwordreset.microsoftonline.com");
    })
 
    it('personal email', async() => {
-      await AuthApp.personalAccount();
+      await AuthApp.resetPersonalAccount();
       await AuthApp.successfulOpen("account.live.com");
    })
+
+   it('password', async() => {
+      await AuthApp.resetPassword();
+      await AuthApp.successfulOpen("passwordreset.microsoftonline.com");
+   })
+
 });
 
