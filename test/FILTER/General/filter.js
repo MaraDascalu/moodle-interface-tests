@@ -6,7 +6,7 @@ const CourseManagement = new CourseManagementActions()
 
 describe('Try to filter and sort the courses from the top of the page', async () => {
 
-    beforeEach('Sign in and go to the main page', async () => {
+    before('Sign in and go to the main page', async () => {
         await AuthApp.open();
         await AuthApp.successfulOpen();
         await AuthApp.navigateToLogin();
@@ -18,8 +18,20 @@ describe('Try to filter and sort the courses from the top of the page', async ()
         await CourseManagement.filterByYear();
     });
 
-    it('Filter the courses by semester', async () => {
+   it('Filter the courses by semester', async () => {
         await CourseManagement.filterBySemester();
+    });
+
+    it('Filter the courses by progress status', async () => {
+        await CourseManagement.filterByProgress();
+    });
+
+    it('Sort courses by last accesed', async () => {
+        await CourseManagement.sortCourses();
+    });
+
+    it('Search course', async () => {
+        await CourseManagement.searchCourse();
     });
 
 });
