@@ -18,7 +18,6 @@ describe('Login should be unsuccessful for invalid credentials', async() => {
    })
 });
 
-
 describe('Login should be successful for valid credentials', async() => {
    before('Navigate to login page for Moodle', async () => {
         await AuthApp.open();
