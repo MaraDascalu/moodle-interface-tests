@@ -1,4 +1,5 @@
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
+import {SuccResetEmailMsg, SuccResetPassMsg} from  "../../../lib/util/AuthApp/constants.js";
 
 const AuthApp = new AuthAppActions();
 
@@ -16,13 +17,12 @@ describe('User should be able to reset', async() => {
 
    it('personal email', async() => {
       await AuthApp.resetPersonalAccount();
-      await AuthApp.successfulOpen("account.live.com");
+      await AuthApp.successfulOpen(SuccResetEmailMsg);
    })
 
    it('password', async() => {
       await AuthApp.resetPassword();
-      await AuthApp.successfulOpen("passwordreset.microsoftonline.com");
+      await AuthApp.successfulOpen(SuccResetPassMsg);
    })
-
 });
 
