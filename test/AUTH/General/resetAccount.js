@@ -1,5 +1,5 @@
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
-import {SuccResetEmailMsg, SuccResetPassMsg} from  "../../../lib/util/AuthApp/constants.js";
+import { UriPath } from  "../../../lib/util/AuthApp/constants.js";
 
 const AuthApp = new AuthAppActions();
 
@@ -17,12 +17,12 @@ describe('User should be able to reset', async() => {
 
    it('personal email', async() => {
       await AuthApp.resetPersonalAccount();
-      await AuthApp.successfulOpen(SuccResetEmailMsg);
+      await AuthApp.successfulOpen(UriPath.RESET_EMAIL);
    })
 
    it('password', async() => {
       await AuthApp.resetPassword();
-      await AuthApp.successfulOpen(SuccResetPassMsg);
+      await AuthApp.successfulOpen(UriPath.RESET_ACCOUNT);
    })
 });
 
