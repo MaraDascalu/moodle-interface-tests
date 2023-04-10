@@ -11,7 +11,7 @@ describe('Check if the course page is displayed correctly', async () => {
         await AuthApp.successfulOpen();
         await AuthApp.navigateToLogin();
         await AuthApp.loginWithNewAccount();
-        await CourseManagement.successfulOpen();
+        await CourseManagement.successfulNavigateToMainPage();
     });
 
     it('For course accesed from the main page', async () => {
@@ -27,7 +27,7 @@ describe('Try to navigate between the main page and a course page', async () => 
         await AuthApp.successfulOpen();
         await AuthApp.navigateToLogin();
         await AuthApp.loginWithNewAccount();
-        await CourseManagement.successfulOpen();
+        await CourseManagement.successfulNavigateToMainPage();
     });
 
     it('and back', async () => {

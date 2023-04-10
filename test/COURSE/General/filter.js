@@ -11,7 +11,7 @@ describe('Try to filter and sort the courses from the top of the page', async ()
         await AuthApp.successfulOpen();
         await AuthApp.navigateToLogin();
         await AuthApp.loginWithNewAccount();
-        await CourseManagement.successfulOpen();
+        await CourseManagement.successfulNavigateToMainPage();
     });
 
     it('Filter the courses by year', async () => {
