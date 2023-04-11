@@ -4,7 +4,7 @@ import { UriPath } from  "../../../lib/util/AuthApp/constants.js";
 const AuthApp = new AuthAppActions();
 
 describe('User should be able to reset', async() => {
-   beforeEach('Navigate to login page for Moodle', async () => {
+   beforeEach('Navigate to login page for Moodle', async() => {
       await AuthApp.open();
       await AuthApp.successfulOpen();
       await AuthApp.navigateToLogin();

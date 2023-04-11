@@ -1,6 +1,8 @@
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
+import MainPage from "../../../lib/util/NavBarApp/actions.js";
 
 const AuthApp = new AuthAppActions();
+const WelcomePage = new MainPage();
 
 describe('Login should be unsuccessful for invalid credentials', async() => {
    beforeEach('Navigate to login page for Moodle', async () => {
@@ -24,12 +26,18 @@ describe('Login should be unsuccessful for invalid credentials', async() => {
 
 describe('Login should be successful for valid credentials', async() => {
    before('Navigate to login page for Moodle', async () => {
-        await AuthApp.open();
-        await AuthApp.successfulOpen();
-        await AuthApp.navigateToLogin();
+      await AuthApp.open();
+      await AuthApp.successfulOpen();
+      await AuthApp.navigateToLogin();
    }); 
 
    it('for new account', async () => {
-    await AuthApp.loginWithNewAccount();
+      await AuthApp.loginWithNewAccount();
+   })
+
+   afterEach('Log out current user', async() => {
+      await WelcomePage.successfulNavigateToWelcomePage();
+      await AuthApp.signOut();
+      await AuthApp.successfulOpen();
    })
 });
