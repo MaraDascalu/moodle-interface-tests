@@ -1,16 +1,21 @@
+import { browser } from "@wdio/globals";
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
 import CourseManagementActions from "../../../lib/util/CourseManagement/actions.js";
 
 const AuthApp = new AuthAppActions();
-const CourseManagement = new CourseManagementActions()
+const CourseManagement = new CourseManagementActions();
+var loginFlag = false;
 
 describe('Try to filter and sort the courses from the top of the page', async () => {
 
-    before('Sign in and go to the main page', async () => {
+    beforeEach('Sign in', async () => {
         await AuthApp.open();
         await AuthApp.successfulOpen();
         await AuthApp.navigateToLogin();
-        await AuthApp.loginWithNewAccount();
+        if (loginFlag == false) {
+            await AuthApp.loginWithNewAccount();
+            loginFlag = true;
+        }
         await CourseManagement.successfulNavigateToMainPage();
     });
 
@@ -48,7 +53,9 @@ describe('Try to filter and sort the courses from the top of the page', async ()
 
     it('Sort then filter courses', async () => {
         await CourseManagement.sortFilterCourses();
-    })
+    });
 
-
+    afterEach('Sign out user', async () => {
+        await AuthApp.signOut();
+    });
 });
