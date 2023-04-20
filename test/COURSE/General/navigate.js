@@ -1,4 +1,3 @@
-import { brotliCompress } from "zlib";
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
 import CourseManagementActions from "../../../lib/util/CourseManagement/actions.js";
 

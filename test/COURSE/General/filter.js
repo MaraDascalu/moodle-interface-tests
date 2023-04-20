@@ -1,4 +1,3 @@
-import { browser } from "@wdio/globals";
 import AuthAppActions from "../../../lib/util/AuthApp/actions.js";
 import CourseManagementActions from "../../../lib/util/CourseManagement/actions.js";
 

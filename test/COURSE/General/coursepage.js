@@ -18,4 +18,9 @@ describe('Check if the course page is displayed correctly', async () => {
         await CourseManagement.checkCoursePage();
     });
 
+    after('Sign out', async () => {
+        await browser.back();
+        await AuthApp.signOut();
+    });
+
 });
