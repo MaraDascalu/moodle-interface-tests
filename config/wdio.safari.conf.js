@@ -29,6 +29,11 @@ export const config = {
     exclude: [
         // '../test/spec/**/*.js'
     ],
+    suites: {
+        auth: ['../test/AUTH/**/*.js'],
+        navBar: ['../test/NAVIGATION-MENU/**/*.js'],
+        coures: ['../test/COURSE/**/*.js']
+    },
     //
     // ============
     // Capabilities
@@ -45,7 +50,7 @@ export const config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 10,
     injectGlobals: true,
     //
     // If you have trouble getting all important capabilities together, check out the
@@ -59,10 +64,7 @@ export const config = {
         // 5 instances get started at a time.
         maxInstances: 1,
         //
-        browserName: 'chrome',
-        'goog:loggingPrefs': {
-            browser: 'ALL'
-        },
+        browserName: 'safari',
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -116,7 +118,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['safaridriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
