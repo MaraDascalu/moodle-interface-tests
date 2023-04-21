@@ -3,6 +3,7 @@ import CourseManagementActions from "../../../lib/util/CourseManagement/actions.
 
 const AuthApp = new AuthAppActions();
 const CourseManagement = new CourseManagementActions();
+
 var loginFlag = false;
 
 describe('Try to filter and sort the courses from the top of the page', async () => {
