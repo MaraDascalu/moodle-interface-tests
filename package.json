@@ -4,7 +4,7 @@
   "devDependencies": {
     "@wdio/allure-reporter": "^8.5.0",
     "@wdio/browser-runner": "^8.5.6",
-    "@wdio/cli": "^8.6.0",
+    "@wdio/cli": "^8.8.4",
     "@wdio/globals": "^8.6.0",
     "@wdio/local-runner": "^8.6.0",
     "@wdio/mocha-framework": "^8.5.6",
@@ -12,11 +12,16 @@
     "chromedriver": "^112.0.0",
     "expect": "^29.5.0",
     "expect-webdriverio": "^4.1.2",
+    "safaridriver": "^0.0.4",
     "source-map-support": "^0.5.21",
-    "wdio-chromedriver-service": "^8.1.1"
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-safaridriver-service": "^2.1.0"
   },
   "scripts": {
-    "test:chrome": "npx wdio run config/wdio.conf.js",
-    "wdio": "wdio run ./config/wdio.conf.js"
+    "test:chrome": "npx wdio run config/wdio.chrome.conf.js",
+    "test:chrome:auth": "npx wdio run config/wdio.chrome.conf.js --suite auth",
+    "test:safari": "npx wdio run config/wdio.safari.conf.js",
+    "test:safari:auth": "npx wdio run config/wdio.safari.conf.js --suite auth",
+    "wdio": "wdio run ./wdio.conf.js"
   }
 }

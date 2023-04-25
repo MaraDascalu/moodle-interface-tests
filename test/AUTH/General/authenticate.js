@@ -35,7 +35,7 @@ describe('Login should be successful for valid credentials', async() => {
       await AuthApp.loginWithNewAccount();
    })
 
-   afterEach('Log out current user', async() => {
+   after('Log out current user', async() => {
       await WelcomePage.successfulNavigateToWelcomePage();
       await AuthApp.signOut();
       await AuthApp.successfulOpen();
