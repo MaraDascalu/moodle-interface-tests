@@ -40,7 +40,7 @@ describe('Access each item founs in NaBar Menu', () => {
         await NavBarApp.successfulNavigateToPage(UriPath.MAIN, PageTitle.MAIN);
     });
 
-    it.only('NOTIFICATIONS BUTTON', async () => {
+    it('NOTIFICATIONS BUTTON', async () => {
         await NavBarApp.openNotificationsPopover();
     });
 
