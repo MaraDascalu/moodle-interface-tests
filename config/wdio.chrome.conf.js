@@ -65,8 +65,8 @@ export const config = {
         maxInstances: 1,
         //
         browserName: 'chrome',
-        'goog:loggingPrefs': {
-            browser: 'ALL'
+        'goog:chromeOptions': {
+            args: ['--incognito'],
         },
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
