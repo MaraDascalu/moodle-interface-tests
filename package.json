@@ -25,7 +25,6 @@
     "test:safari": "npx wdio run config/wdio.safari.conf.js",
     "test:safari:auth": "npx wdio run config/wdio.safari.conf.js --suite auth",
     "test:safari:course": "npx wdio run config/wdio.safari.conf.js --suite course",
-    "test:safari:navbar": "npx wdio run config/wdio.safari.conf.js --suite navbar",
-    "wdio": "wdio run ./wdio.conf.js"
+    "test:safari:navbar": "npx wdio run config/wdio.safari.conf.js --suite navbar"
   }
 }
