@@ -12,7 +12,8 @@ const USER = {
     INVALID: { 
         EMAIL: {
             DOMAIN: "...@s.unibuc.roo",
-            ROOT: "..."  //any other address
+            ROOT: "...", //s.unibuc address without dot between first and last name
+            FULL: "..." //any other address
         },
         PASSWORD: ""
     } 

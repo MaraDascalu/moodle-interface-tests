@@ -22,6 +22,10 @@ describe('Login should be unsuccessful for invalid credentials', async() => {
    it('for invalid root email', async () => {
       await AuthApp.loginWithInvalidRootEmail();
    })
+
+   it('for inexistent email', async () => {
+      await AuthApp.loginWithInexistentEmail();
+   })
 });
 
 describe('Login should be successful for valid credentials', async() => {
