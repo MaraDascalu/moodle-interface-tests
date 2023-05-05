@@ -31,8 +31,8 @@ export const config = {
     ],
     suites: {
         auth: ['../test/AUTH/**/*.js'],
-        navBar: ['../test/NAVIGATION-MENU/**/*.js'],
-        coures: ['../test/COURSE/**/*.js']
+        navbar: ['../test/NAVIGATION-MENU/**/*.js'],
+        course: ['../test/COURSE/**/*.js']
     },
     //
     // ============
